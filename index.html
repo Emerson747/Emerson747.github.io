@@ -12,7 +12,6 @@
         }
 
         body {
-            /* Helvetica Bold Italic stack */
             font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
             font-weight: 700;
             font-style: italic;
@@ -36,31 +35,32 @@
             align-items: center;
             justify-content: center;
             cursor: pointer;
+            /* Snappy transition */
             transition: transform 0.25s ease-out, z-index 0s;
             z-index: 1;
         }
 
         .quarter-content {
             font-size: clamp(2rem, 5vw, 4rem);
-            letter-spacing: -0.02em; /* Tighter tracking typical of Helvetica Bold */
+            letter-spacing: -0.02em;
             backface-visibility: hidden; 
         }
 
-        /* 1.9x Scale */
+        /* Reduced Scale to 1.4x */
         .quarter:hover {
-            transform: scale(1.9); 
+            transform: scale(1.4); 
             z-index: 100;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
         }
 
-        /* Color Palette */
+        /* HEX Color Palette */
         .quarter:nth-child(1) { background: #000000; color: #ffffff; }
         .quarter:nth-child(2) { background: #FFFFFF; color: #000000; }
         .quarter:nth-child(3) { background: #979797; color: #ffffff; }
         .quarter:nth-child(4) { background: #C8322D; color: #ffffff; }
 
         @media (max-width: 768px) {
-            .quarter:hover { transform: scale(1.4); }
+            .quarter:hover { transform: scale(1.2); }
             .quarter-content { font-size: 1.8rem; }
         }
     </style>
