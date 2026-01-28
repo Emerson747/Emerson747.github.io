@@ -13,8 +13,6 @@
 
         body {
             font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-            font-weight: 700;
-            font-style: italic;
             overflow: hidden;
             height: 100vh;
             width: 100vw;
@@ -27,6 +25,25 @@
             grid-template-rows: 1fr 1fr;
             height: 100vh;
             width: 100vw;
+            position: relative;
+        }
+
+        /* Center Name Styling */
+        .center-name {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 200; /* Above the hovered boxes */
+            font-weight: 700;
+            font-style: normal; /* Non-italic */
+            font-size: clamp(2.5rem, 8vw, 6rem);
+            white-space: nowrap;
+            pointer-events: none; /* Allows hovering the boxes underneath */
+            
+            /* This creates the color split effect automatically */
+            color: #fff;
+            mix-blend-mode: difference;
         }
 
         .quarter {
@@ -35,25 +52,25 @@
             align-items: center;
             justify-content: center;
             cursor: pointer;
-            /* Animation speed set to 0.12s for ultra-fast response */
             transition: transform 0.12s ease-out, z-index 0s;
             z-index: 1;
         }
 
         .quarter-content {
             font-size: clamp(2rem, 5vw, 4rem);
+            font-weight: 700;
+            font-style: italic;
             letter-spacing: -0.02em;
             backface-visibility: hidden; 
         }
 
-        /* 1.4x Scale */
         .quarter:hover {
             transform: scale(1.4); 
             z-index: 100;
             box-shadow: 0 10px 30px rgba(0,0,0,0.3);
         }
 
-        /* HEX Color Palette */
+        /* HEX Colors */
         .quarter:nth-child(1) { background: #000000; color: #ffffff; }
         .quarter:nth-child(2) { background: #FFFFFF; color: #000000; }
         .quarter:nth-child(3) { background: #979797; color: #ffffff; }
@@ -61,3 +78,21 @@
 
         @media (max-width: 768px) {
             .quarter:hover { transform: scale(1.2); }
+            .quarter-content { font-size: 1.8rem; }
+            .center-name { font-size: 2.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="center-name">Emerson Racette</div>
+
+    <div class="grid-container">
+        <div class="quarter"><h2 class="quarter-content">Art</h2></div>
+        <div class="quarter"><h2 class="quarter-content">Design</h2></div>
+        <div class="quarter"><h2 class="quarter-content">Music</h2></div>
+        <div class="quarter"><h2 class="quarter-content">Contact</h2></div>
+    </div>
+
+</body>
+</html>
