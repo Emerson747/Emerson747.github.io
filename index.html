@@ -28,11 +28,11 @@
             position: relative;
         }
 
-        /* Container for the centered name */
-        .name-wrapper {
+        /* The Name in the Center */
+        .center-name {
             position: absolute;
             top: 50%;
-            left: 50%;
+            left: 47.4%;
             transform: translate(-50%, -50%);
             z-index: 200;
             font-weight: 700;
@@ -40,19 +40,12 @@
             font-size: clamp(2.5rem, 8vw, 6rem);
             white-space: nowrap;
             pointer-events: none;
-            display: flex;
-            justify-content: center;
-        }
+            text-transform: none;
 
-        /* Layered text to handle the precise color split */
-        .name-layer {
-            position: absolute;
-            width: 100vw;
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            mix-blend-mode: difference;
+            /* Exact Color Split: White on the left, Black on the right */
+            background: linear-gradient(to right, #ffffff 50%, #000000 50%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
         .quarter {
@@ -61,7 +54,7 @@
             align-items: center;
             justify-content: center;
             cursor: pointer;
-            transition: transform 0.12s ease-out;
+            transition: transform 0.12s ease-out, z-index 0s;
             z-index: 1;
         }
 
@@ -79,26 +72,22 @@
             box-shadow: 0 10px 30px rgba(0,0,0,0.3);
         }
 
-        /* HEX Color Palette from image */
-        .quarter:nth-child(1) { background: #000000; color: #ffffff; }
-        .quarter:nth-child(2) { background: #FFFFFF; color: #000000; }
-        .quarter:nth-child(3) { background: #979797; color: #ffffff; }
-        .quarter:nth-child(4) { background: #C8322D; color: #ffffff; }
+        /* Updated Colors from provided assets */
+        .quarter:nth-child(1) { background: #000000; color: #ffffff; } /* Top Left */
+        .quarter:nth-child(2) { background: #FFFFFF; color: #000000; } /* Top Right */
+        .quarter:nth-child(3) { background: #979797; color: #ffffff; } /* Bottom Left */
+        .quarter:nth-child(4) { background: #C8322D; color: #ffffff; } /* Bottom Right */
 
         @media (max-width: 768px) {
             .quarter:hover { transform: scale(1.2); }
             .quarter-content { font-size: 1.8rem; }
-            .name-wrapper { font-size: 2.5rem; }
+            .center-name { font-size: 2.8rem; }
         }
     </style>
 </head>
 <body>
 
-    <div class="name-wrapper">
-        <div class="name-layer" style="color: #fff;">
-            Emerson Racette
-        </div>
-    </div>
+    <div class="center-name">Emerson Racette</div>
 
     <div class="grid-container">
         <div class="quarter"><h2 class="quarter-content">Art</h2></div>
