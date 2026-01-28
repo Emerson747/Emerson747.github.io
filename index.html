@@ -28,24 +28,26 @@
             position: relative;
         }
 
-        /* The Name in the Center */
+        /* Center Name Styling */
         .center-name {
             position: absolute;
-            top: 50%;
-            left: 47.4%;
-            transform: translate(-50%, -50%);
+            top: 52.5%; /* Anchor at the vertical middle */
+            left: 47.3%;
+            /* translate -100% on Y moves the text entirely above the 50% line */
+            transform: translate(-50%, -100%); 
             z-index: 200;
             font-weight: 700;
             font-style: normal;
             font-size: clamp(2.5rem, 8vw, 6rem);
             white-space: nowrap;
             pointer-events: none;
-            text-transform: none;
-
-            /* Exact Color Split: White on the left, Black on the right */
-            background: linear-gradient(to right, #ffffff 50%, #000000 50%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            
+            /* Color split effect */
+            color: #fff;
+            mix-blend-mode: difference;
+            
+            /* Optional: Add a tiny bit of padding so it doesn't touch the line pixel-perfectly */
+            padding-bottom: 5px; 
         }
 
         .quarter {
@@ -72,16 +74,16 @@
             box-shadow: 0 10px 30px rgba(0,0,0,0.3);
         }
 
-        /* Updated Colors from provided assets */
-        .quarter:nth-child(1) { background: #000000; color: #ffffff; } /* Top Left */
-        .quarter:nth-child(2) { background: #FFFFFF; color: #000000; } /* Top Right */
-        .quarter:nth-child(3) { background: #979797; color: #ffffff; } /* Bottom Left */
-        .quarter:nth-child(4) { background: #C8322D; color: #ffffff; } /* Bottom Right */
+        /* HEX Colors */
+        .quarter:nth-child(1) { background: #000000; color: #ffffff; }
+        .quarter:nth-child(2) { background: #FFFFFF; color: #000000; }
+        .quarter:nth-child(3) { background: #979797; color: #ffffff; }
+        .quarter:nth-child(4) { background: #C8322D; color: #ffffff; }
 
         @media (max-width: 768px) {
             .quarter:hover { transform: scale(1.2); }
             .quarter-content { font-size: 1.8rem; }
-            .center-name { font-size: 2.8rem; }
+            .center-name { font-size: 2.5rem; }
         }
     </style>
 </head>
