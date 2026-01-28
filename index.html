@@ -35,8 +35,8 @@
             align-items: center;
             justify-content: center;
             cursor: pointer;
-            /* Snappy transition */
-            transition: transform 0.25s ease-out, z-index 0s;
+            /* Animation speed set to 0.12s for ultra-fast response */
+            transition: transform 0.12s ease-out, z-index 0s;
             z-index: 1;
         }
 
@@ -46,7 +46,7 @@
             backface-visibility: hidden; 
         }
 
-        /* Reduced Scale to 1.4x */
+        /* 1.4x Scale */
         .quarter:hover {
             transform: scale(1.4); 
             z-index: 100;
@@ -61,16 +61,3 @@
 
         @media (max-width: 768px) {
             .quarter:hover { transform: scale(1.2); }
-            .quarter-content { font-size: 1.8rem; }
-        }
-    </style>
-</head>
-<body>
-    <div class="grid-container">
-        <div class="quarter"><h2 class="quarter-content">Art</h2></div>
-        <div class="quarter"><h2 class="quarter-content">Design</h2></div>
-        <div class="quarter"><h2 class="quarter-content">Music</h2></div>
-        <div class="quarter"><h2 class="quarter-content">Contact</h2></div>
-    </div>
-</body>
-</html>
