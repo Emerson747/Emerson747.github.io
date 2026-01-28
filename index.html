@@ -35,8 +35,8 @@
             align-items: center;
             justify-content: center;
             cursor: pointer;
-            /* Transition for the scale effect */
-            transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), z-index 0.1s;
+            /* Shorter duration (0.25s) for a quicker feel */
+            transition: transform 0.25s ease-out, z-index 0s;
             z-index: 1;
             overflow: hidden;
         }
@@ -45,69 +45,36 @@
             font-size: clamp(2rem, 5vw, 4rem);
             font-weight: 700;
             letter-spacing: 0.05em;
-            transition: transform 0.4s ease;
         }
 
-        /* Hover Effect: Only enlarges the hovered box */
+        /* Massive 300% Growth Effect */
         .quarter:hover {
-            transform: scale(1.1); /* Enlarges the box by 10% */
-            z-index: 100; /* Ensures it pops above the other 3 boxes */
-            box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+            transform: scale(3); 
+            z-index: 100; /* Keeps the hovered box on top of everything else */
+            box-shadow: 0 0 100px rgba(0,0,0,0.5);
         }
 
-        /* Specific HEX colors and text colors */
-        .quarter:nth-child(1) {
-            background: #000000;
-            color: #ffffff;
-        }
+        /* Color Palette */
+        .quarter:nth-child(1) { background: #000000; color: #ffffff; }
+        .quarter:nth-child(2) { background: #FFFFFF; color: #000000; }
+        .quarter:nth-child(3) { background: #979797; color: #ffffff; }
+        .quarter:nth-child(4) { background: #C8322D; color: #ffffff; }
 
-        .quarter:nth-child(2) {
-            background: #FFFFFF;
-            color: #000000;
-        }
-
-        .quarter:nth-child(3) {
-            background: #979797;
-            color: #ffffff;
-        }
-
-        .quarter:nth-child(4) {
-            background: #C8322D;
-            color: #ffffff;
-        }
-
-        /* Hide details by default */
-        .quarter-details {
-            display: none;
-        }
+        .quarter-details { display: none; }
 
         @media (max-width: 768px) {
-            .quarter-content {
-                font-size: clamp(1.5rem, 6vw, 2.5rem);
-            }
-            .quarter:hover {
-                transform: scale(1.05); /* Smaller scale for mobile screens */
-            }
+            /* On mobile, 300% might be too large; scaled slightly for visibility */
+            .quarter:hover { transform: scale(2); }
+            .quarter-content { font-size: 1.5rem; }
         }
     </style>
 </head>
 <body>
     <div class="grid-container">
-        <div class="quarter">
-            <h2 class="quarter-content">Art</h2>
-        </div>
-
-        <div class="quarter">
-            <h2 class="quarter-content">Design</h2>
-        </div>
-
-        <div class="quarter">
-            <h2 class="quarter-content">Music</h2>
-        </div>
-
-        <div class="quarter">
-            <h2 class="quarter-content">Contact</h2>
-        </div>
+        <div class="quarter"><h2 class="quarter-content">Art</h2></div>
+        <div class="quarter"><h2 class="quarter-content">Design</h2></div>
+        <div class="quarter"><h2 class="quarter-content">Music</h2></div>
+        <div class="quarter"><h2 class="quarter-content">Contact</h2></div>
     </div>
 </body>
 </html>
