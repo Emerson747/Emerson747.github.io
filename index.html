@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
+    <link rel="icon" type="image/png" href="favicon.png">
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-
         body {
             font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
             overflow: hidden;
@@ -18,7 +18,6 @@
             width: 100vw;
             background-color: #000;
         }
-
         .grid-container {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -27,14 +26,12 @@
             width: 100vw;
             position: relative;
         }
-
         /* Center Name Styling */
         .center-name {
             position: absolute;
-            top: 52.5%; /* Anchor at the vertical middle */
-            left: 47.3%;
-            /* translate -100% on Y moves the text entirely above the 50% line */
-            transform: translate(-50%, -100%); 
+            top: 49%;
+            left: 50%;
+            transform: translate(-50%, -50%); 
             z-index: 200;
             font-weight: 700;
             font-style: normal;
@@ -45,11 +42,7 @@
             /* Color split effect */
             color: #fff;
             mix-blend-mode: difference;
-            
-            /* Optional: Add a tiny bit of padding so it doesn't touch the line pixel-perfectly */
-            padding-bottom: 5px; 
         }
-
         .quarter {
             position: relative;
             display: flex;
@@ -59,7 +52,6 @@
             transition: transform 0.12s ease-out, z-index 0s;
             z-index: 1;
         }
-
         .quarter-content {
             font-size: clamp(2rem, 5vw, 4rem);
             font-weight: 700;
@@ -67,19 +59,16 @@
             letter-spacing: -0.02em;
             backface-visibility: hidden; 
         }
-
         .quarter:hover {
             transform: scale(1.4); 
             z-index: 100;
             box-shadow: 0 10px 30px rgba(0,0,0,0.3);
         }
-
         /* HEX Colors */
         .quarter:nth-child(1) { background: #000000; color: #ffffff; }
         .quarter:nth-child(2) { background: #FFFFFF; color: #000000; }
-        .quarter:nth-child(3) { background: #979797; color: #ffffff; }
-        .quarter:nth-child(4) { background: #C8322D; color: #ffffff; }
-
+        .quarter:nth-child(3) { background: #979997; color: #ffffff; }
+        .quarter:nth-child(4) { background: #C8322e; color: #ffffff; }
         @media (max-width: 768px) {
             .quarter:hover { transform: scale(1.2); }
             .quarter-content { font-size: 1.8rem; }
@@ -88,15 +77,12 @@
     </style>
 </head>
 <body>
-
     <div class="center-name">Emerson Racette</div>
-
     <div class="grid-container">
         <div class="quarter"><h2 class="quarter-content">Art</h2></div>
         <div class="quarter"><h2 class="quarter-content">Design</h2></div>
         <div class="quarter"><h2 class="quarter-content">Music</h2></div>
         <div class="quarter"><h2 class="quarter-content">Contact</h2></div>
     </div>
-
 </body>
 </html>
