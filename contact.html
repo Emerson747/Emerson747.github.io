@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Emerson Racette</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            background: #C8322e;
+            color: #ffffff;
+            min-height: 100vh;
+            padding: 3rem 2rem;
+        }
+        .back-btn {
+            position: fixed;
+            top: 2rem;
+            left: 2rem;
+            background: #ffffff;
+            color: #C8322e;
+            padding: 0.8rem 1.5rem;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1rem;
+            transition: transform 0.2s;
+        }
+        .back-btn:hover {
+            transform: scale(1.1);
+        }
+        .content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding-top: 3rem;
+        }
+        h1 {
+            font-size: clamp(3rem, 8vw, 6rem);
+            font-weight: 700;
+            margin-bottom: 2rem;
+        }
+        p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+        .contact-methods {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+        .contact-item {
+            background: #ffffff;
+            color: #C8322e;
+            padding: 1.5rem 2rem;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.3rem;
+            transition: transform 0.2s;
+            display: block;
+        }
+        .contact-item:hover {
+            transform: translateX(10px);
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="back-btn">← Back</a>
+    <div class="content">
+        <h1>Contact</h1>
+        <p>Get in touch for commissions, collaborations, or inquiries.</p>
+        
+        <div class="contact-methods">
+            <a href="mailto:your.email@example.com" class="contact-item">→ Email</a>
+            <a href="https://linkedin.com/in/yourprofile" target="_blank" class="contact-item">→ LinkedIn</a>
+            <a href="https://instagram.com/yourhandle" target="_blank" class="contact-item">→ Instagram</a>
+        </div>
+    </div>
+</body>
+</html>

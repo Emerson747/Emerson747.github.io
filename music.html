@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music - Emerson Racette</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            background: #979997;
+            color: #ffffff;
+            min-height: 100vh;
+            padding: 3rem 2rem;
+        }
+        .back-btn {
+            position: fixed;
+            top: 2rem;
+            left: 2rem;
+            background: #ffffff;
+            color: #979997;
+            padding: 0.8rem 1.5rem;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1rem;
+            transition: transform 0.2s;
+        }
+        .back-btn:hover {
+            transform: scale(1.1);
+        }
+        .content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-top: 3rem;
+        }
+        h1 {
+            font-size: clamp(3rem, 8vw, 6rem);
+            font-weight: 700;
+            margin-bottom: 2rem;
+        }
+        p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+        .music-links {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+        .music-link {
+            background: #ffffff;
+            color: #979997;
+            padding: 1.5rem 2rem;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.3rem;
+            transition: transform 0.2s;
+            display: block;
+        }
+        .music-link:hover {
+            transform: translateX(10px);
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="back-btn">← Back</a>
+    <div class="content">
+        <h1>Music</h1>
+        <p>Explore my musical work and compositions.</p>
+        <p>Add links to your music platforms, tracks, or recordings.</p>
+        
+        <div class="music-links">
+            <a href="#" class="music-link">→ Spotify</a>
+            <a href="#" class="music-link">→ SoundCloud</a>
+            <a href="#" class="music-link">→ YouTube</a>
+        </div>
+    </div>
+</body>
+</html>

@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Emerson's page</title>
-    <link rel="icon" type="image/png" href="favicon.png">
+    <title>Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
     <style>
         * {
             margin: 0;
@@ -29,7 +29,7 @@
         /* Center Name Styling */
         .center-name {
             position: absolute;
-            top: 49%;
+            top: 50%;
             left: 50%;
             transform: translate(-50%, -50%); 
             z-index: 200;
@@ -51,6 +51,7 @@
             cursor: pointer;
             transition: transform 0.12s ease-out, z-index 0s;
             z-index: 1;
+            text-decoration: none;
         }
         .quarter-content {
             font-size: clamp(2rem, 5vw, 4rem);
@@ -79,10 +80,10 @@
 <body>
     <div class="center-name">Emerson Racette</div>
     <div class="grid-container">
-        <div class="quarter"><h2 class="quarter-content">Art</h2></div>
-        <div class="quarter"><h2 class="quarter-content">Design</h2></div>
-        <div class="quarter"><h2 class="quarter-content">Music</h2></div>
-        <div class="quarter"><h2 class="quarter-content">Contact</h2></div>
+        <a href="art.html" class="quarter"><h2 class="quarter-content">Art</h2></a>
+        <a href="design.html" class="quarter"><h2 class="quarter-content">Design</h2></a>
+        <a href="music.html" class="quarter"><h2 class="quarter-content">Music</h2></a>
+        <a href="contact.html" class="quarter"><h2 class="quarter-content">Contact</h2></a>
     </div>
 </body>
 </html>
